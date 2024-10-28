@@ -1,0 +1,123 @@
+:root {
+    --background: #1a1a2e;
+    --color: #ffffff;
+    --primary-color: #0f3460;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "poppins";
+    background: var(--background);
+    color: var(--color);
+    letter-spacing: 1px;
+    transition: background 0.2s ease;
+    -webkit-transition: background 0.2s ease;
+    -moz-transition: background 0.2s ease;
+    -ms-transition: background 0.2s ease;
+    -o-transition: background 0.2s ease;
+    
+}
+
+.welcome {
+    margin-left: 100px;
+    margin-top: 100px;
+}
+.welcome span {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.side-menu {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    width: 60px;
+   margin-right: 20px;
+    transform: translateY(-50%); /* Dikeyde ortalama */
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid hsla(0, 0%, 65%, 0.158);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    border-radius: 16px;
+}
+
+/* İkon stil */
+.menu-item {
+    color: white;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 24px;
+    position: relative;
+}
+
+.menu-item:hover{
+    color: #0f3460;
+}
+
+/* İsim etiketi */
+.menu-item span {
+    position: absolute;
+    left: -80px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+/* Üzerine gelince isim etiketi görünsün */
+.menu-item:hover span {
+    opacity: 1;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown select {
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.blurred-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid hsla(0, 0%, 65%, 0.158);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    font-size: 20px;
+}
+
+.custom-card {
+    border-radius: 16px;
+    background-color: #ffffff;
+    padding: 20px;
+}
+.custom-card .card-title,
+.custom-card .card-subtitle,
+.custom-card .card-text {
+    color: black; /* Tüm yazıları siyah yap */
+}
